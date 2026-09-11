@@ -1,0 +1,883 @@
+<!DOCTYPE html>
+<html lang="tr" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AVEX MEDYA - Profesyonel Otomotiv Medya & Prodüksiyon</title>
+    <meta name="description" content="Otomobilinize hak ettiği değeri veren profesyonel medya prodüksiyon çözümleri. 4K yol çekimi, drone çekimi ve sinematik reels üretimi." />
+    <meta property="og:title" content="AVEX MEDYA - Profesyonel Otomotiv Medya & Prodüksiyon" />
+    <meta property="og:description" content="Otomobilinize hak ettiği değeri veren profesyonel medya prodüksiyon çözümleri." />
+    <link rel="icon" type="image/svg+xml" href="/avex-logo.svg" />
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="/src/style.css">
+  </head>
+  <body class="bg-black text-white font-sans selection:bg-white selection:text-black">
+
+    <!-- PRELOADER (SADECE AVEX MEDYA LOGOSU VE BEYAZ LÜKS IŞIK EFEKTİ) -->
+    <div id="preloader" class="fixed inset-0 z-[999] bg-black flex flex-col items-center justify-center px-6 transition-all duration-700">
+      <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.12)_0%,transparent_65%)] pointer-events-none"></div>
+      
+      <div class="relative w-full max-w-lg flex flex-col items-center justify-center text-white">
+        <!-- AVEX MEDYA SVG LOGO -->
+        <svg viewBox="0 0 720 230" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full h-auto drop-shadow-[0_0_35px_rgba(255,255,255,0.45)]">
+          <g fill="currentColor">
+            <!-- A -->
+            <polygon points="110,20 120,20 195,155 167,155 115,58 63,155 35,155" />
+            <!-- V -->
+            <polygon points="175,20 203,20 255,117 307,20 335,20 260,155 250,155" />
+            <!-- E -->
+            <path d="M 500 20 L 405 20 C 378 20 365 32 365 52 L 365 123 C 365 143 378 155 405 155 L 500 155 L 500 131 L 407 131 C 398 131 392 125 392 116 L 392 98 L 480 98 L 480 77 L 392 77 L 392 59 C 392 50 398 44 407 44 L 500 44 Z" />
+            <!-- X -->
+            <polygon points="535,20 563,20 685,155 657,155" />
+            <polygon points="685,20 657,20 535,155 563,155" />
+          </g>
+          <g stroke="currentColor">
+            <line x1="35" y1="200" x2="195" y2="200" stroke-width="2.5" stroke-linecap="round" />
+            <line x1="525" y1="200" x2="685" y2="200" stroke-width="2.5" stroke-linecap="round" />
+          </g>
+          <text x="360" y="209" text-anchor="middle" fill="currentColor" font-family="'Syne', 'Manrope', system-ui, sans-serif" font-size="27" font-weight="700" letter-spacing="18">
+            MEDYA
+          </text>
+        </svg>
+
+        <!-- Progress bar in white -->
+        <div class="mt-8 h-[2px] w-36 bg-white/10 rounded-full overflow-hidden relative">
+          <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white to-transparent w-full animate-[marquee_1.5s_infinite_linear]"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- NAVBAR -->
+    <header class="fixed top-0 left-0 right-0 z-50 glass-dark border-b border-white/10 transition-all duration-300">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 sm:h-20 flex items-center justify-between">
+        
+        <!-- Logo Link -->
+        <a href="#hero" class="flex items-center group py-2" id="nav-logo">
+          <svg viewBox="0 0 720 230" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-6 sm:h-8 w-auto text-white group-hover:text-zinc-300 transition-colors">
+            <g fill="currentColor">
+              <polygon points="110,20 120,20 195,155 167,155 115,58 63,155 35,155" />
+              <polygon points="175,20 203,20 255,117 307,20 335,20 260,155 250,155" />
+              <path d="M 500 20 L 405 20 C 378 20 365 32 365 52 L 365 123 C 365 143 378 155 405 155 L 500 155 L 500 131 L 407 131 C 398 131 392 125 392 116 L 392 98 L 480 98 L 480 77 L 392 77 L 392 59 C 392 50 398 44 407 44 L 500 44 Z" />
+              <polygon points="535,20 563,20 685,155 657,155" />
+              <polygon points="685,20 657,20 535,155 563,155" />
+            </g>
+            <g stroke="currentColor">
+              <line x1="35" y1="200" x2="195" y2="200" stroke-width="2.5" stroke-linecap="round" />
+              <line x1="525" y1="200" x2="685" y2="200" stroke-width="2.5" stroke-linecap="round" />
+            </g>
+            <text x="360" y="209" text-anchor="middle" fill="currentColor" font-family="'Syne', sans-serif" font-size="27" font-weight="700" letter-spacing="18">MEDYA</text>
+          </svg>
+        </a>
+
+        <!-- Desktop Navigation -->
+        <nav class="hidden md:flex items-center space-x-8 text-sm font-medium tracking-wider uppercase text-white/70">
+          <a href="#hizmetler" class="hover:text-white transition-colors">Hizmetler</a>
+          <a href="#paketler" class="hover:text-white transition-colors">Paketler</a>
+          <a href="#surec" class="hover:text-white transition-colors">Süreç</a>
+          <a href="#galeri" class="hover:text-white transition-colors">Galeri</a>
+          <a href="#yorumlar" class="hover:text-white transition-colors">Referanslar</a>
+          <a href="#randevu" class="hover:text-white transition-colors">İletişim</a>
+        </nav>
+
+        <!-- CTA & WhatsApp (Pure White Theme) -->
+        <div class="hidden md:flex items-center space-x-4">
+          <a href="https://wa.me/905555555555" target="_blank" rel="noreferrer" class="inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-white text-black font-bold text-xs uppercase tracking-widest hover:bg-zinc-200 transition-all shadow-[0_0_20px_rgba(255,255,255,0.25)]">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0012.04 2zm0 17.83c-1.49 0-2.95-.4-4.23-1.16l-.3-.18-3.14.82.84-3.06-.2-.31a7.89 7.89 0 01-1.21-4.23c0-4.36 3.55-7.91 7.91-7.91 2.11 0 4.1.82 5.59 2.31 1.49 1.49 2.31 3.48 2.31 5.59 0 4.36-3.55 7.91-7.91 7.91z"/>
+            </svg>
+            Randevu Al
+          </a>
+        </div>
+
+        <!-- Mobile Menu Button with 44px+ touch target & icon swap -->
+        <button id="mobile-menu-btn" class="md:hidden w-11 h-11 flex items-center justify-center rounded-xl bg-white/5 border border-white/10 hover:border-white/30 text-white active:bg-white/15 transition-all" aria-label="Menü">
+          <svg id="menu-icon-open" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+          <svg id="menu-icon-close" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Mobile Dropdown Menu -->
+      <div id="mobile-menu" class="hidden md:hidden fixed inset-x-0 top-16 sm:top-20 z-40 bg-black/95 backdrop-blur-2xl border-b border-white/10 px-5 py-5 space-y-2 shadow-2xl transition-all duration-300 max-h-[calc(100vh-4.5rem)] overflow-y-auto">
+        <a href="#hizmetler" class="flex items-center justify-between px-4 py-3 rounded-xl text-base font-medium text-white/80 hover:text-white hover:bg-white/5 active:bg-white/10 transition-colors mobile-nav-link">
+          <span>Hizmetler</span>
+          <svg class="w-4 h-4 text-white/30" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+        </a>
+        <a href="#paketler" class="flex items-center justify-between px-4 py-3 rounded-xl text-base font-medium text-white/80 hover:text-white hover:bg-white/5 active:bg-white/10 transition-colors mobile-nav-link">
+          <span>Paketler</span>
+          <svg class="w-4 h-4 text-white/30" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+        </a>
+        <a href="#surec" class="flex items-center justify-between px-4 py-3 rounded-xl text-base font-medium text-white/80 hover:text-white hover:bg-white/5 active:bg-white/10 transition-colors mobile-nav-link">
+          <span>Süreç</span>
+          <svg class="w-4 h-4 text-white/30" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+        </a>
+        <a href="#galeri" class="flex items-center justify-between px-4 py-3 rounded-xl text-base font-medium text-white/80 hover:text-white hover:bg-white/5 active:bg-white/10 transition-colors mobile-nav-link">
+          <span>Galeri</span>
+          <svg class="w-4 h-4 text-white/30" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+        </a>
+        <a href="#yorumlar" class="flex items-center justify-between px-4 py-3 rounded-xl text-base font-medium text-white/80 hover:text-white hover:bg-white/5 active:bg-white/10 transition-colors mobile-nav-link">
+          <span>Referanslar</span>
+          <svg class="w-4 h-4 text-white/30" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+        </a>
+        <a href="#randevu" class="flex items-center justify-between px-4 py-3 rounded-xl text-base font-medium text-white/80 hover:text-white hover:bg-white/5 active:bg-white/10 transition-colors mobile-nav-link">
+          <span>İletişim & Randevu</span>
+          <svg class="w-4 h-4 text-white/30" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+        </a>
+        <div class="pt-2">
+          <a href="https://wa.me/905555555555" target="_blank" class="flex items-center justify-center gap-2 w-full py-3.5 bg-white text-black font-bold uppercase rounded-xl tracking-wider text-xs shadow-lg shadow-white/10">
+            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+              <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0012.04 2zm0 17.83c-1.49 0-2.95-.4-4.23-1.16l-.3-.18-3.14.82.84-3.06-.2-.31a7.89 7.89 0 01-1.21-4.23c0-4.36 3.55-7.91 7.91-7.91 2.11 0 4.1.82 5.59 2.31 1.49 1.49 2.31 3.48 2.31 5.59 0 4.36-3.55 7.91-7.91 7.91z"/>
+            </svg>
+            WhatsApp'tan İletişime Geç
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <!-- HERO SECTION WITH 3D CAR SHOWROOM -->
+    <section id="hero" class="relative min-h-[100svh] min-h-[580px] w-full flex items-center justify-center overflow-hidden bg-black pt-20 pb-12 sm:pt-28 sm:pb-16">
+      
+      <!-- 3D Three.js WebGL Container -->
+      <div id="webgl-container" class="absolute inset-0 z-0 cursor-grab active:cursor-grabbing"></div>
+
+      <!-- Loading spinner for 3D model (White) -->
+      <div id="car-loading" class="absolute inset-0 z-10 flex flex-col items-center justify-center bg-black/50 pointer-events-none transition-opacity duration-500">
+        <div class="w-10 h-10 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
+        <span class="text-xs text-white/60 uppercase tracking-widest mt-3 font-medium">Model Yükleniyor...</span>
+      </div>
+
+      <!-- 3D Showroom Indicator -->
+      <div class="absolute top-20 right-3 sm:top-24 sm:right-8 z-20 flex items-center gap-1.5 sm:gap-2 glass px-3 py-1.5 sm:px-4 sm:py-2 rounded-full border border-white/10">
+        <span class="w-2 h-2 rounded-full bg-white animate-pulse mr-0.5 sm:mr-1"></span>
+        <span class="text-[10px] sm:text-[11px] text-white/80 uppercase tracking-wider font-semibold">3D Canlı Showroom</span>
+      </div>
+
+      <!-- Hero Overlay Content -->
+      <div class="relative z-20 max-w-4xl mx-auto px-4 text-center mt-8 sm:mt-12 pointer-events-none w-full">
+        
+        <!-- Brand Logo in Hero with White Ambient Glow -->
+        <div class="flex justify-center mb-4 sm:mb-6 pointer-events-auto">
+          <div class="w-full max-w-[260px] xs:max-w-[320px] sm:max-w-md md:max-w-2xl relative inline-flex items-center justify-center">
+            <div class="absolute inset-0 blur-3xl bg-white/20 scale-95 pointer-events-none -z-10"></div>
+            <svg viewBox="0 0 720 230" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full h-auto drop-shadow-[0_0_25px_rgba(255,255,255,0.45)]">
+              <g fill="currentColor">
+                <polygon points="110,20 120,20 195,155 167,155 115,58 63,155 35,155" />
+                <polygon points="175,20 203,20 255,117 307,20 335,20 260,155 250,155" />
+                <path d="M 500 20 L 405 20 C 378 20 365 32 365 52 L 365 123 C 365 143 378 155 405 155 L 500 155 L 500 131 L 407 131 C 398 131 392 125 392 116 L 392 98 L 480 98 L 480 77 L 392 77 L 392 59 C 392 50 398 44 407 44 L 500 44 Z" />
+                <polygon points="535,20 563,20 685,155 657,155" />
+                <polygon points="685,20 657,20 535,155 563,155" />
+              </g>
+              <g stroke="currentColor">
+                <line x1="35" y1="200" x2="195" y2="200" stroke-width="2.5" stroke-linecap="round" />
+                <line x1="525" y1="200" x2="685" y2="200" stroke-width="2.5" stroke-linecap="round" />
+              </g>
+              <text x="360" y="209" text-anchor="middle" fill="currentColor" font-family="'Syne', 'Manrope', system-ui, sans-serif" font-size="27" font-weight="700" letter-spacing="18">
+                MEDYA
+              </text>
+            </svg>
+          </div>
+        </div>
+
+        <p class="text-xs sm:text-lg md:text-2xl text-white/70 font-light tracking-[0.18em] sm:tracking-[0.25em] uppercase mb-6 sm:mb-10 pointer-events-auto px-2">
+          Profesyonel Otomotiv Medya Hizmetleri
+        </p>
+
+        <!-- CTA Buttons (White Theme) -->
+        <div class="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-3 sm:gap-4 pointer-events-auto w-full max-w-xs sm:max-w-none mx-auto">
+          <a href="#randevu" class="w-full sm:w-auto px-6 sm:px-8 py-3.5 sm:py-4 rounded-full bg-white text-black font-bold uppercase tracking-widest text-xs hover:bg-zinc-200 transition-all shadow-[0_0_25px_rgba(255,255,255,0.3)] text-center">
+            Randevu Oluştur
+          </a>
+          <a href="#hizmetler" class="w-full sm:w-auto px-6 sm:px-8 py-3.5 sm:py-4 rounded-full glass text-white font-medium uppercase tracking-widest text-xs hover:border-white/50 hover:bg-white/10 transition-all text-center">
+            Hizmetleri İncele
+          </a>
+        </div>
+
+        <!-- 360 Drag Hint -->
+        <div class="mt-6 sm:mt-8 flex items-center justify-center gap-2 text-white/40 text-[11px] sm:text-xs tracking-wider">
+          <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4 animate-pulse shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path>
+          </svg>
+          <span>360° İncelemek İçin Sürükleyin</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- STATS COUNTERS (White High-Contrast Theme) -->
+    <section id="stats" class="py-12 sm:py-16 md:py-20 bg-dark-900 border-y border-white/5 relative overflow-hidden">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-6 md:gap-8 text-center">
+          
+          <div class="glass p-4 sm:p-6 rounded-xl sm:rounded-2xl">
+            <div class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white font-display mb-1 sm:mb-2 counter-val" data-target="100" data-suffix="+">
+              100+
+            </div>
+            <div class="text-white/60 uppercase tracking-wider sm:tracking-widest text-[11px] sm:text-xs md:text-sm font-medium">Mutlu Müşteri</div>
+          </div>
+
+          <div class="glass p-4 sm:p-6 rounded-xl sm:rounded-2xl">
+            <div class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white font-display mb-1 sm:mb-2 counter-val" data-target="350" data-suffix="+">
+              350+
+            </div>
+            <div class="text-white/60 uppercase tracking-wider sm:tracking-widest text-[11px] sm:text-xs md:text-sm font-medium">Gerçekleşen Çekim</div>
+          </div>
+
+          <div class="glass p-4 sm:p-6 rounded-xl sm:rounded-2xl">
+            <div class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white font-display mb-1 sm:mb-2 counter-val" data-target="12" data-suffix="M+">
+              12M+
+            </div>
+            <div class="text-white/60 uppercase tracking-wider sm:tracking-widest text-[11px] sm:text-xs md:text-sm font-medium">Milyon İzlenme</div>
+          </div>
+
+          <div class="glass p-4 sm:p-6 rounded-xl sm:rounded-2xl">
+            <div class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white font-display mb-1 sm:mb-2 counter-val" data-target="98" data-suffix="%">
+              %98
+            </div>
+            <div class="text-white/60 uppercase tracking-wider sm:tracking-widest text-[11px] sm:text-xs md:text-sm font-medium">Memnuniyet Oranı</div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- PREMİUM HİZMETLER -->
+    <section id="hizmetler" class="py-16 sm:py-24 md:py-32 bg-black relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center mb-12 sm:mb-20">
+          <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-3 sm:mb-4 uppercase tracking-wider font-display">
+            Premium <span class="text-gradient-white">Hizmetler</span>
+          </h2>
+          <p class="text-white/50 max-w-2xl mx-auto text-sm sm:text-lg font-light">
+            Otomobilinize hak ettiği değeri veren profesyonel medya prodüksiyon çözümleri.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
+          
+          <!-- Hizmet 1 -->
+          <div class="group relative h-[380px] sm:h-[420px] rounded-2xl overflow-hidden glass p-6 sm:p-8 flex flex-col justify-end transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_0_30px_rgba(255,255,255,0.15)] hover:border-white/50">
+            <video class="absolute inset-0 w-full h-full object-cover opacity-35 group-hover:opacity-60 transition-opacity duration-700 pointer-events-none" autoplay loop muted playsinline>
+              <source src="https://cdn.pixabay.com/video/2020/05/25/40141-425890250_large.mp4" type="video/mp4" />
+            </video>
+            <div class="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-transparent"></div>
+            
+            <div class="relative z-10">
+              <div class="w-11 h-11 sm:w-12 sm:h-12 rounded-xl bg-white/10 text-white flex items-center justify-center mb-3 sm:mb-4 border border-white/20">
+                <svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"></path>
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 13a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                </svg>
+              </div>
+
+              <div class="mb-2 sm:mb-3">
+                <span class="text-[10px] sm:text-xs px-3 py-1 rounded-full bg-white/10 text-white/90 border border-white/20 font-semibold tracking-wider uppercase">
+                  Detaylı & 4K
+                </span>
+              </div>
+
+              <h3 class="text-xl sm:text-2xl font-bold text-white mb-2 uppercase tracking-wide font-display">İç Detaylı Çekim</h3>
+              <p class="text-white/60 text-xs sm:text-sm font-light leading-relaxed mb-5 sm:mb-6">Aracınızın iç mekanını en ince detayına kadar profesyonelce tanıtıyoruz.</p>
+              
+              <button onclick="selectPackage('İç Detaylı Çekim')" class="w-full py-3 sm:py-2.5 rounded-xl glass text-white text-xs uppercase tracking-widest font-semibold hover:bg-white hover:text-black hover:border-white transition-all min-h-[44px] flex items-center justify-center">
+                Teklif & Randevu Al
+              </button>
+            </div>
+          </div>
+
+          <!-- Hizmet 2 -->
+          <div class="group relative h-[380px] sm:h-[420px] rounded-2xl overflow-hidden glass p-6 sm:p-8 flex flex-col justify-end transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_0_30px_rgba(255,255,255,0.15)] hover:border-white/50">
+            <video class="absolute inset-0 w-full h-full object-cover opacity-35 group-hover:opacity-60 transition-opacity duration-700 pointer-events-none" autoplay loop muted playsinline>
+              <source src="https://cdn.pixabay.com/video/2021/08/25/86267-592652157_large.mp4" type="video/mp4" />
+            </video>
+            <div class="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-transparent"></div>
+            
+            <div class="relative z-10">
+              <div class="w-11 h-11 sm:w-12 sm:h-12 rounded-xl bg-white/10 text-white flex items-center justify-center mb-3 sm:mb-4 border border-white/20">
+                <svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <polygon points="3 11 22 2 13 21 11 13 3 11" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></polygon>
+                </svg>
+              </div>
+
+              <div class="mb-2 sm:mb-3">
+                <span class="text-[10px] sm:text-xs px-3 py-1 rounded-full bg-white/10 text-white/90 border border-white/20 font-semibold tracking-wider uppercase">
+                  Havadan Çekim
+                </span>
+              </div>
+
+              <h3 class="text-xl sm:text-2xl font-bold text-white mb-2 uppercase tracking-wide font-display">Drone Çekimi</h3>
+              <p class="text-white/60 text-xs sm:text-sm font-light leading-relaxed mb-5 sm:mb-6">Havadan etkileyici görüntülerle aracınızı farklı bir boyuta taşıyoruz.</p>
+              
+              <button onclick="selectPackage('Drone Çekimi')" class="w-full py-3 sm:py-2.5 rounded-xl glass text-white text-xs uppercase tracking-widest font-semibold hover:bg-white hover:text-black hover:border-white transition-all min-h-[44px] flex items-center justify-center">
+                Teklif & Randevu Al
+              </button>
+            </div>
+          </div>
+
+          <!-- Hizmet 3 -->
+          <div class="group relative h-[380px] sm:h-[420px] rounded-2xl overflow-hidden glass p-6 sm:p-8 flex flex-col justify-end transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_0_30px_rgba(255,255,255,0.15)] hover:border-white/50">
+            <video class="absolute inset-0 w-full h-full object-cover opacity-35 group-hover:opacity-60 transition-opacity duration-700 pointer-events-none" autoplay loop muted playsinline>
+              <source src="https://cdn.pixabay.com/video/2020/05/25/40140-425890249_large.mp4" type="video/mp4" />
+            </video>
+            <div class="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-transparent"></div>
+            
+            <div class="relative z-10">
+              <div class="w-11 h-11 sm:w-12 sm:h-12 rounded-xl bg-white/10 text-white flex items-center justify-center mb-3 sm:mb-4 border border-white/20">
+                <svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
+                </svg>
+              </div>
+
+              <div class="mb-2 sm:mb-3">
+                <span class="text-[10px] sm:text-xs px-3 py-1 rounded-full bg-white/10 text-white/90 border border-white/20 font-semibold tracking-wider uppercase">
+                  Dinamik Performans
+                </span>
+              </div>
+
+              <h3 class="text-xl sm:text-2xl font-bold text-white mb-2 uppercase tracking-wide font-display">Yol Çekimi</h3>
+              <p class="text-white/60 text-xs sm:text-sm font-light leading-relaxed mb-5 sm:mb-6">Aracınızın performansını ve yol tutuşunu en iyi şekilde yansıtıyoruz.</p>
+              
+              <button onclick="selectPackage('Yol Çekimi')" class="w-full py-3 sm:py-2.5 rounded-xl glass text-white text-xs uppercase tracking-widest font-semibold hover:bg-white hover:text-black hover:border-white transition-all min-h-[44px] flex items-center justify-center">
+                Teklif & Randevu Al
+              </button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- GÜVENİLEN MARKALAR: DJI - BETAGUARD -->
+    <section class="py-12 sm:py-16 bg-dark-900 border-y border-white/5 overflow-hidden flex flex-col items-center">
+      <p class="text-white/30 text-[11px] sm:text-xs tracking-[0.3em] uppercase mb-6 sm:mb-8 text-center font-medium">
+        Güvenilen Markalar
+      </p>
+      
+      <div class="relative w-full max-w-7xl mx-auto overflow-hidden">
+        <div class="absolute inset-y-0 left-0 w-16 sm:w-32 bg-gradient-to-r from-dark-900 to-transparent z-10 pointer-events-none"></div>
+        <div class="absolute inset-y-0 right-0 w-16 sm:w-32 bg-gradient-to-l from-dark-900 to-transparent z-10 pointer-events-none"></div>
+        
+        <div class="marquee-track flex gap-12 sm:gap-20 md:gap-28 items-center">
+          <!-- DJI & BETAGUARD seamless loop -->
+          <div class="flex items-center gap-12 sm:gap-20 md:gap-28">
+            <span class="text-2xl sm:text-3xl md:text-5xl font-display font-extrabold tracking-wider text-white/30 hover:text-white transition-colors">DJI</span>
+            <span class="text-xs text-white/20">•</span>
+            <span class="text-2xl sm:text-3xl md:text-5xl font-display font-extrabold tracking-wider text-white/30 hover:text-white transition-colors">BETAGUARD</span>
+            <span class="text-xs text-white/20">•</span>
+            <span class="text-2xl sm:text-3xl md:text-5xl font-display font-extrabold tracking-wider text-white/30 hover:text-white transition-colors">DJI</span>
+            <span class="text-xs text-white/20">•</span>
+            <span class="text-2xl sm:text-3xl md:text-5xl font-display font-extrabold tracking-wider text-white/30 hover:text-white transition-colors">BETAGUARD</span>
+            <span class="text-xs text-white/20">•</span>
+          </div>
+
+          <!-- Duplicate for infinite seamless marquee -->
+          <div class="flex items-center gap-12 sm:gap-20 md:gap-28">
+            <span class="text-2xl sm:text-3xl md:text-5xl font-display font-extrabold tracking-wider text-white/30 hover:text-white transition-colors">DJI</span>
+            <span class="text-xs text-white/20">•</span>
+            <span class="text-2xl sm:text-3xl md:text-5xl font-display font-extrabold tracking-wider text-white/30 hover:text-white transition-colors">BETAGUARD</span>
+            <span class="text-xs text-white/20">•</span>
+            <span class="text-2xl sm:text-3xl md:text-5xl font-display font-extrabold tracking-wider text-white/30 hover:text-white transition-colors">DJI</span>
+            <span class="text-xs text-white/20">•</span>
+            <span class="text-2xl sm:text-3xl md:text-5xl font-display font-extrabold tracking-wider text-white/30 hover:text-white transition-colors">BETAGUARD</span>
+            <span class="text-xs text-white/20">•</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PAKETLER (FİYATLAR KALDIRILDI - BEYAZ TEMA) -->
+    <section id="paketler" class="py-16 sm:py-24 md:py-32 bg-black relative overflow-hidden">
+      <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-white/5 rounded-full blur-[140px] pointer-events-none"></div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="text-center mb-12 sm:mb-20">
+          <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-3 sm:mb-4 uppercase tracking-wider font-display">
+            Premium <span class="text-gradient-white">Paketler</span>
+          </h2>
+          <p class="text-white/50 max-w-xl mx-auto text-sm sm:text-base font-light">
+            İhtiyacınıza uygun, anahtar teslim profesyonel çekim ve kurgu paketleri
+          </p>
+        </div>
+
+        <div class="flex flex-col lg:flex-row items-stretch justify-center gap-6 sm:gap-8 lg:gap-6 xl:gap-8 max-w-6xl mx-auto">
+          
+          <!-- Silver Paket -->
+          <div class="relative w-full lg:w-1/3 rounded-2xl glass p-6 sm:p-8 transition-all duration-500 hover:-translate-y-2 border-white/10 flex flex-col justify-between">
+            <div>
+              <h3 class="text-xl sm:text-2xl font-bold mb-2 sm:mb-3 uppercase tracking-wide text-center pb-4 border-b border-white/10 font-display">
+                Silver Paket
+              </h3>
+
+              <p class="text-center text-white/50 text-[11px] sm:text-xs uppercase tracking-widest mb-6 sm:mb-8 font-medium">
+                Temel Prodüksiyon Paketi
+              </p>
+
+              <ul class="space-y-3.5 sm:space-y-4 mb-6 sm:mb-8">
+                <li class="flex items-center text-white/80 text-sm">
+                  <svg class="w-5 h-5 text-white mr-3 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                  <span>İç Detaylı Çekim</span>
+                </li>
+                <li class="flex items-center text-white/80 text-sm">
+                  <svg class="w-5 h-5 text-white mr-3 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                  <span>Yol Çekimi</span>
+                </li>
+              </ul>
+            </div>
+
+            <button onclick="selectPackage('Silver Paket')" class="w-full py-3.5 sm:py-3 rounded-xl glass text-white text-xs uppercase tracking-widest font-semibold hover:border-white hover:bg-white hover:text-black transition-all min-h-[46px] flex items-center justify-center">
+              Bu Paketi Seç
+            </button>
+          </div>
+
+          <!-- Gold Paket (POPÜLER - BEYAZ LÜKS VURGU) -->
+          <div class="relative w-full lg:w-1/3 rounded-2xl glass-white p-6 sm:p-8 md:p-10 transition-all duration-500 hover:-translate-y-3 border-white/60 shadow-[0_0_40px_rgba(255,255,255,0.15)] lg:-mt-4 lg:mb-4 flex flex-col justify-between">
+            <div class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2">
+              <div class="bg-white text-black text-[10px] sm:text-xs font-extrabold uppercase tracking-widest py-1.5 px-4 sm:px-5 rounded-full shadow-[0_0_20px_rgba(255,255,255,0.35)] whitespace-nowrap">
+                En Çok Tercih Edilen
+              </div>
+            </div>
+
+            <div>
+              <h3 class="text-xl sm:text-2xl font-bold mb-2 sm:mb-3 uppercase tracking-wide text-center pb-4 border-b border-white/20 text-white font-display">
+                Gold Paket
+              </h3>
+
+              <p class="text-center text-white/60 text-[11px] sm:text-xs uppercase tracking-widest mb-6 sm:mb-8 font-medium">
+                Kapsamlı Medya Prodüksiyonu
+              </p>
+
+              <ul class="space-y-3.5 sm:space-y-4 mb-6 sm:mb-8">
+                <li class="flex items-center text-white text-sm font-medium">
+                  <svg class="w-5 h-5 text-white mr-3 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                  <span>İç Detaylı Çekim</span>
+                </li>
+                <li class="flex items-center text-white text-sm font-medium">
+                  <svg class="w-5 h-5 text-white mr-3 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                  <span>Drone Çekimi</span>
+                </li>
+                <li class="flex items-center text-white text-sm font-medium">
+                  <svg class="w-5 h-5 text-white mr-3 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                  <span>Yol Çekimi</span>
+                </li>
+              </ul>
+            </div>
+
+            <button onclick="selectPackage('Gold Paket')" class="w-full py-4 sm:py-3.5 rounded-xl bg-white text-black text-xs uppercase tracking-widest font-bold hover:bg-zinc-200 transition-all shadow-[0_0_20px_rgba(255,255,255,0.25)] min-h-[46px] flex items-center justify-center">
+              Randevu Oluştur
+            </button>
+          </div>
+
+          <!-- Platinum VIP Paket -->
+          <div class="relative w-full lg:w-1/3 rounded-2xl glass p-6 sm:p-8 transition-all duration-500 hover:-translate-y-2 border-white/10 flex flex-col justify-between">
+            <div>
+              <h3 class="text-xl sm:text-2xl font-bold mb-2 sm:mb-3 uppercase tracking-wide text-center pb-4 border-b border-white/10 font-display">
+                Platinum VIP
+              </h3>
+
+              <p class="text-center text-white/50 text-[11px] sm:text-xs uppercase tracking-widest mb-6 sm:mb-8 font-medium">
+                Tam Sinematik Prodüksiyon
+              </p>
+
+              <ul class="space-y-3.5 sm:space-y-4 mb-6 sm:mb-8">
+                <li class="flex items-center text-white/80 text-sm">
+                  <svg class="w-5 h-5 text-white mr-3 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                  <span>İç Detaylı Çekim</span>
+                </li>
+                <li class="flex items-center text-white/80 text-sm">
+                  <svg class="w-5 h-5 text-white mr-3 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                  <span>Drone Çekimi</span>
+                </li>
+                <li class="flex items-center text-white/80 text-sm">
+                  <svg class="w-5 h-5 text-white mr-3 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                  <span>Yol Çekimi</span>
+                </li>
+                <li class="flex items-center text-white/80 text-sm">
+                  <svg class="w-5 h-5 text-white mr-3 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                  <span>Reels (30-60 sn)</span>
+                </li>
+                <li class="flex items-center text-white/80 text-sm">
+                  <svg class="w-5 h-5 text-white mr-3 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                  <span>Renk Düzenleme (Color Grading)</span>
+                </li>
+                <li class="flex items-center text-white/80 text-sm">
+                  <svg class="w-5 h-5 text-white mr-3 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                  <span>Thumbnail / Kapak Fotoğrafı</span>
+                </li>
+              </ul>
+            </div>
+
+            <button onclick="selectPackage('Platinum VIP Paket')" class="w-full py-3.5 sm:py-3 rounded-xl glass text-white text-xs uppercase tracking-widest font-semibold hover:border-white hover:bg-white hover:text-black transition-all min-h-[46px] flex items-center justify-center">
+              Bu Paketi Seç
+            </button>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ÇALIŞMA SÜRECİ (TİMELİNE - BEYAZ TEMA) -->
+    <section id="surec" class="py-16 sm:py-24 md:py-28 bg-dark-900 relative">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center mb-12 sm:mb-20">
+          <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-3 sm:mb-4 uppercase tracking-wider font-display">
+            Çalışma <span class="text-gradient-white">Sürecimiz</span>
+          </h2>
+          <p class="text-white/50 text-sm sm:text-base font-light">4 adımda kusursuz teslimat süreci</p>
+        </div>
+
+        <div class="relative">
+          <!-- Connector line on desktop -->
+          <div class="absolute top-1/2 left-0 w-full h-[2px] bg-white/10 -translate-y-1/2 hidden md:block"></div>
+          
+          <div class="grid grid-cols-1 md:grid-cols-4 gap-6 sm:gap-8 md:gap-4 relative z-10">
+            
+            <div class="relative flex flex-col items-center text-center p-4 sm:p-0">
+              <div class="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-dark-900 border-2 border-white flex items-center justify-center text-xl sm:text-2xl font-bold text-white mb-4 sm:mb-6 shadow-[0_0_20px_rgba(255,255,255,0.25)]">
+                1
+              </div>
+              <h3 class="text-lg sm:text-xl font-bold uppercase tracking-wider mb-1 sm:mb-2 font-display">Randevu</h3>
+              <p class="text-white/50 text-xs sm:text-sm font-light leading-relaxed">İhtiyaçlarınızı belirliyor ve çekim tarihini planlıyoruz.</p>
+            </div>
+
+            <div class="relative flex flex-col items-center text-center p-4 sm:p-0">
+              <div class="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-dark-900 border-2 border-white flex items-center justify-center text-xl sm:text-2xl font-bold text-white mb-4 sm:mb-6 shadow-[0_0_20px_rgba(255,255,255,0.25)]">
+                2
+              </div>
+              <h3 class="text-lg sm:text-xl font-bold uppercase tracking-wider mb-1 sm:mb-2 font-display">Çekim</h3>
+              <p class="text-white/50 text-xs sm:text-sm font-light leading-relaxed">Profesyonel ekipmanlarla aracınızı en iyi açılardan görüntülüyoruz.</p>
+            </div>
+
+            <div class="relative flex flex-col items-center text-center p-4 sm:p-0">
+              <div class="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-dark-900 border-2 border-white flex items-center justify-center text-xl sm:text-2xl font-bold text-white mb-4 sm:mb-6 shadow-[0_0_20px_rgba(255,255,255,0.25)]">
+                3
+              </div>
+              <h3 class="text-lg sm:text-xl font-bold uppercase tracking-wider mb-1 sm:mb-2 font-display">Kurgu</h3>
+              <p class="text-white/50 text-xs sm:text-sm font-light leading-relaxed">Sinematik renk düzenlemesi ve premium kurgu işlemleri yapılıyor.</p>
+            </div>
+
+            <div class="relative flex flex-col items-center text-center p-4 sm:p-0">
+              <div class="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-dark-900 border-2 border-white flex items-center justify-center text-xl sm:text-2xl font-bold text-white mb-4 sm:mb-6 shadow-[0_0_20px_rgba(255,255,255,0.25)]">
+                4
+              </div>
+              <h3 class="text-lg sm:text-xl font-bold uppercase tracking-wider mb-1 sm:mb-2 font-display">Teslim</h3>
+              <p class="text-white/50 text-xs sm:text-sm font-light leading-relaxed">Hazırlanan içerikler yüksek kalitede 4K formatında teslim ediliyor.</p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GALERİ -->
+    <section id="galeri" class="py-16 sm:py-24 md:py-32 bg-black relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center mb-10 sm:mb-16">
+          <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-3 sm:mb-4 uppercase tracking-wider font-display">
+            Öne Çıkan <span class="text-gradient-white">İşlerimiz</span>
+          </h2>
+          <p class="text-white/50 max-w-xl mx-auto text-sm sm:text-base font-light">
+            Görselleştirdiğimiz son araç çekimlerinden seçmeler
+          </p>
+
+          <!-- Filter Pills (White Theme) -->
+          <div class="flex flex-wrap items-center justify-center gap-2 sm:gap-3 mt-6 sm:mt-8">
+            <button class="gallery-filter-btn px-4 py-2 sm:px-5 sm:py-2 rounded-full text-xs font-bold uppercase tracking-wider transition-all bg-white text-black min-h-[38px]" data-filter="all">
+              Tümü
+            </button>
+            <button class="gallery-filter-btn px-4 py-2 sm:px-5 sm:py-2 rounded-full text-xs font-semibold uppercase tracking-wider transition-all bg-white/5 text-white/70 hover:text-white min-h-[38px]" data-filter="photo">
+              Fotoğraflar
+            </button>
+            <button class="gallery-filter-btn px-4 py-2 sm:px-5 sm:py-2 rounded-full text-xs font-semibold uppercase tracking-wider transition-all bg-white/5 text-white/70 hover:text-white min-h-[38px]" data-filter="drive">
+              Yol Çekimi
+            </button>
+          </div>
+        </div>
+
+        <!-- Gallery Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+          
+          <div class="gallery-item group relative h-64 sm:h-72 lg:h-80 rounded-xl sm:rounded-2xl overflow-hidden glass cursor-pointer" data-category="photo">
+            <img src="https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?q=80&w=2070&auto=format&fit=crop" alt="Mercedes AMG GT" loading="lazy" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-90 sm:opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4 sm:p-6">
+              <span class="text-xs sm:text-sm font-semibold tracking-wider uppercase text-white">Mercedes AMG GT</span>
+            </div>
+          </div>
+
+          <div class="gallery-item group relative h-64 sm:h-72 lg:h-80 rounded-xl sm:rounded-2xl overflow-hidden glass cursor-pointer" data-category="photo">
+            <img src="https://images.unsplash.com/photo-1603584173870-7f23fdae1b7a?q=80&w=2069&auto=format&fit=crop" alt="Audi RS6 Avant" loading="lazy" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-90 sm:opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4 sm:p-6">
+              <span class="text-xs sm:text-sm font-semibold tracking-wider uppercase text-white">Audi RS6 Avant</span>
+            </div>
+          </div>
+
+          <div class="gallery-item group relative h-64 sm:h-72 lg:h-80 rounded-xl sm:rounded-2xl overflow-hidden glass cursor-pointer" data-category="drive">
+            <img src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?q=80&w=2070&auto=format&fit=crop" alt="Porsche 911 GT3" loading="lazy" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-90 sm:opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4 sm:p-6">
+              <span class="text-xs sm:text-sm font-semibold tracking-wider uppercase text-white">Porsche 911 GT3 - Yol Çekimi</span>
+            </div>
+          </div>
+
+          <div class="gallery-item group relative h-64 sm:h-72 lg:h-80 rounded-xl sm:rounded-2xl overflow-hidden glass cursor-pointer" data-category="photo">
+            <img src="https://images.unsplash.com/photo-1503376712351-1c2261767098?q=80&w=2112&auto=format&fit=crop" alt="Porsche Turbo S" loading="lazy" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-90 sm:opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4 sm:p-6">
+              <span class="text-xs sm:text-sm font-semibold tracking-wider uppercase text-white">Porsche Turbo S</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- MÜŞTERİ REFERANSLARI -->
+    <section id="yorumlar" class="py-16 sm:py-24 md:py-28 bg-dark-900 border-y border-white/5 relative">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center mb-10 sm:mb-16">
+          <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-3 sm:mb-4 uppercase tracking-wider font-display">
+            Müşteri <span class="text-gradient-white">Yorumları</span>
+          </h2>
+          <div class="w-16 sm:w-20 h-1 bg-white mx-auto rounded-full"></div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
+          
+          <div class="glass p-6 sm:p-8 rounded-xl sm:rounded-2xl flex flex-col justify-between">
+            <div>
+              <div class="flex gap-1 mb-3 sm:mb-4 text-white text-base sm:text-lg">
+                ★★★★★
+              </div>
+              <p class="text-sm sm:text-base text-white/80 font-light italic leading-relaxed mb-5 sm:mb-6">
+                "Avex Medya ile çalışmak harikaydı. Aracımın detayları inanılmaz bir şekilde videoya yansımış."
+              </p>
+            </div>
+            <div class="text-white font-semibold uppercase tracking-wider text-xs sm:text-sm font-display">
+              Can Y.
+            </div>
+          </div>
+
+          <div class="glass p-6 sm:p-8 rounded-xl sm:rounded-2xl flex flex-col justify-between">
+            <div>
+              <div class="flex gap-1 mb-3 sm:mb-4 text-white text-base sm:text-lg">
+                ★★★★★
+              </div>
+              <p class="text-sm sm:text-base text-white/80 font-light italic leading-relaxed mb-5 sm:mb-6">
+                "Profesyonellik arıyorsanız kesinlikle doğru adres. Drone çekimleri ve ses efektleri muazzamdı."
+              </p>
+            </div>
+            <div class="text-white font-semibold uppercase tracking-wider text-xs sm:text-sm font-display">
+              Mehmet K.
+            </div>
+          </div>
+
+          <div class="glass p-6 sm:p-8 rounded-xl sm:rounded-2xl flex flex-col justify-between">
+            <div>
+              <div class="flex gap-1 mb-3 sm:mb-4 text-white text-base sm:text-lg">
+                ★★★★★
+              </div>
+              <p class="text-sm sm:text-base text-white/80 font-light italic leading-relaxed mb-5 sm:mb-6">
+                "Sosyal medya için hazırladıkları reels videoları takipçi ve satışlarımızı çok etkiledi. Teşekkürler."
+              </p>
+            </div>
+            <div class="text-white font-semibold uppercase tracking-wider text-xs sm:text-sm font-display">
+              Ali Rıza T.
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- İLETİŞİM & RANDEVU FORMU -->
+    <section id="randevu" class="py-16 sm:py-24 md:py-32 bg-black relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 sm:gap-16">
+          
+          <!-- Sol Bilgi Kolonu -->
+          <div>
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6 uppercase tracking-wider font-display">
+              İletişime <span class="text-gradient-white">Geçin</span>
+            </h2>
+            <p class="text-white/60 mb-8 sm:mb-12 font-light text-sm sm:text-lg">
+              Randevu almak veya projeleriniz hakkında özel teklif almak için bizimle iletişime geçin.
+            </p>
+
+            <div class="space-y-4 sm:space-y-6">
+              
+              <a href="https://wa.me/905555555555" target="_blank" rel="noreferrer" class="flex items-center group glass p-4 sm:p-5 rounded-xl sm:rounded-2xl hover:border-white/50 transition-all">
+                <div class="w-11 h-11 sm:w-12 sm:h-12 rounded-xl bg-white/10 flex items-center justify-center text-white mr-4 sm:mr-5 group-hover:bg-white group-hover:text-black transition-colors shrink-0">
+                  <svg class="w-5 h-5 sm:w-6 sm:h-6" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0012.04 2zm0 17.83c-1.49 0-2.95-.4-4.23-1.16l-.3-.18-3.14.82.84-3.06-.2-.31a7.89 7.89 0 01-1.21-4.23c0-4.36 3.55-7.91 7.91-7.91 2.11 0 4.1.82 5.59 2.31 1.49 1.49 2.31 3.48 2.31 5.59 0 4.36-3.55 7.91-7.91 7.91z"/>
+                  </svg>
+                </div>
+                <div>
+                  <div class="text-[11px] sm:text-xs text-white/50 uppercase tracking-widest mb-0.5 sm:mb-1">WhatsApp Hattı</div>
+                  <div class="text-base sm:text-lg font-medium text-white group-hover:text-white transition-colors">+90 (555) 555 55 55</div>
+                </div>
+              </a>
+
+              <a href="https://instagram.com/avexmedya" target="_blank" rel="noreferrer" class="flex items-center group glass p-4 sm:p-5 rounded-xl sm:rounded-2xl hover:border-white/50 transition-all">
+                <div class="w-11 h-11 sm:w-12 sm:h-12 rounded-xl bg-white/10 flex items-center justify-center text-white mr-4 sm:mr-5 group-hover:bg-white group-hover:text-black transition-colors shrink-0">
+                  <svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5" stroke-width="2"></rect>
+                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" stroke-width="2"></path>
+                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" stroke-width="2"></line>
+                  </svg>
+                </div>
+                <div>
+                  <div class="text-[11px] sm:text-xs text-white/50 uppercase tracking-widest mb-0.5 sm:mb-1">Instagram</div>
+                  <div class="text-base sm:text-lg font-medium text-white group-hover:text-white transition-colors">@avexmedya</div>
+                </div>
+              </a>
+
+              <div class="flex items-center glass p-4 sm:p-5 rounded-xl sm:rounded-2xl border-white/5">
+                <div class="w-11 h-11 sm:w-12 sm:h-12 rounded-xl bg-white/5 flex items-center justify-center text-white/60 mr-4 sm:mr-5 shrink-0">
+                  <svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                  </svg>
+                </div>
+                <div>
+                  <div class="text-[11px] sm:text-xs text-white/50 uppercase tracking-widest mb-0.5 sm:mb-1">Lokasyon</div>
+                  <div class="text-base sm:text-lg font-light text-white">İstanbul, Türkiye</div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Sağ Randevu Formu -->
+          <div class="glass-dark p-6 sm:p-8 md:p-10 rounded-2xl sm:rounded-3xl border border-white/10">
+            <h3 class="text-xl sm:text-2xl font-bold uppercase tracking-wider mb-4 sm:mb-6 font-display">
+              Hemen Randevu Al
+            </h3>
+
+            <!-- Form Success alert -->
+            <div id="form-success" class="hidden mb-6 p-4 rounded-xl bg-emerald-500/20 border border-emerald-500/40 text-emerald-300 text-sm">
+              ✓ Randevu talebiniz alındı! WhatsApp ile yönlendiriliyorsunuz...
+            </div>
+
+            <form id="booking-form" class="space-y-4 sm:space-y-5">
+              <div>
+                <label class="block text-xs uppercase tracking-widest text-white/60 mb-1.5 sm:mb-2 font-medium">Adınız Soyadınız</label>
+                <input type="text" id="form-name" required placeholder="Örn: Ahmet Yılmaz" class="w-full px-4 py-3.5 sm:py-3 rounded-xl bg-white/5 border border-white/10 text-white placeholder-white/30 focus:outline-none focus:border-white transition-colors text-base" />
+              </div>
+
+              <div>
+                <label class="block text-xs uppercase tracking-widest text-white/60 mb-1.5 sm:mb-2 font-medium">Telefon Numaranız</label>
+                <input type="tel" id="form-phone" required placeholder="05XX XXX XX XX" class="w-full px-4 py-3.5 sm:py-3 rounded-xl bg-white/5 border border-white/10 text-white placeholder-white/30 focus:outline-none focus:border-white transition-colors text-base" />
+              </div>
+
+              <div>
+                <label class="block text-xs uppercase tracking-widest text-white/60 mb-1.5 sm:mb-2 font-medium">İlgilendiğiniz Paket / Hizmet</label>
+                <select id="form-package" class="w-full px-4 py-3.5 sm:py-3 rounded-xl bg-dark-900 border border-white/10 text-white focus:outline-none focus:border-white transition-colors text-base">
+                  <option value="Gold Paket">Gold Paket (En Çok Tercih Edilen)</option>
+                  <option value="Silver Paket">Silver Paket</option>
+                  <option value="Platinum VIP Paket">Platinum VIP Paket</option>
+                  <option value="İç Detaylı Çekim">İç Detaylı Çekim</option>
+                  <option value="Drone Çekimi">Drone Çekimi</option>
+                  <option value="Yol Çekimi">Yol Çekimi</option>
+                  <option value="Özel Çekim / Kurumsal">Özel Çekim / Kurumsal</option>
+                </select>
+              </div>
+
+              <div>
+                <label class="block text-xs uppercase tracking-widest text-white/60 mb-1.5 sm:mb-2 font-medium">Araç Modeli ve Notunuz</label>
+                <textarea id="form-notes" rows="3" placeholder="Araç markası, modeli ve ek isteklerinizi belirtebilirsiniz..." class="w-full px-4 py-3.5 sm:py-3 rounded-xl bg-white/5 border border-white/10 text-white placeholder-white/30 focus:outline-none focus:border-white transition-colors text-base resize-none"></textarea>
+              </div>
+
+              <button type="submit" class="w-full py-4 rounded-xl bg-white text-black font-bold uppercase tracking-widest text-xs sm:text-sm hover:bg-zinc-200 transition-all shadow-[0_0_20px_rgba(255,255,255,0.25)] min-h-[48px]">
+                Randevu Talebini WhatsApp'tan Gönder
+              </button>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-black py-12 sm:py-16 border-t border-white/10">
+      <div class="max-w-7xl mx-auto px-4 flex flex-col items-center text-center">
+        
+        <!-- AVEX MEDYA SVG LOGO -->
+        <div class="mb-6 sm:mb-8">
+          <div class="w-48 sm:w-56 max-w-full relative inline-flex items-center justify-center text-white">
+            <svg viewBox="0 0 720 230" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full h-auto">
+              <g fill="currentColor">
+                <polygon points="110,20 120,20 195,155 167,155 115,58 63,155 35,155" />
+                <polygon points="175,20 203,20 255,117 307,20 335,20 260,155 250,155" />
+                <path d="M 500 20 L 405 20 C 378 20 365 32 365 52 L 365 123 C 365 143 378 155 405 155 L 500 155 L 500 131 L 407 131 C 398 131 392 125 392 116 L 392 98 L 480 98 L 480 77 L 392 77 L 392 59 C 392 50 398 44 407 44 L 500 44 Z" />
+                <polygon points="535,20 563,20 685,155 657,155" />
+                <polygon points="685,20 657,20 535,155 563,155" />
+              </g>
+              <g stroke="currentColor">
+                <line x1="35" y1="200" x2="195" y2="200" stroke-width="2.5" stroke-linecap="round" />
+                <line x1="525" y1="200" x2="685" y2="200" stroke-width="2.5" stroke-linecap="round" />
+              </g>
+              <text x="360" y="209" text-anchor="middle" fill="currentColor" font-family="'Syne', 'Manrope', system-ui, sans-serif" font-size="27" font-weight="700" letter-spacing="18">
+                MEDYA
+              </text>
+            </svg>
+          </div>
+        </div>
+
+        <!-- Social Icons -->
+        <div class="flex gap-4 sm:gap-6 mb-6 sm:mb-8">
+          <a href="https://instagram.com/avexmedya" target="_blank" rel="noreferrer" class="w-11 h-11 sm:w-10 sm:h-10 min-w-[44px] min-h-[44px] rounded-full glass flex items-center justify-center text-white/60 hover:text-white hover:border-white/50 active:bg-white/10 transition-colors">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5" stroke-width="2"></rect>
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" stroke-width="2"></path>
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" stroke-width="2"></line>
+            </svg>
+          </a>
+          <a href="https://wa.me/905555555555" target="_blank" rel="noreferrer" class="w-11 h-11 sm:w-10 sm:h-10 min-w-[44px] min-h-[44px] rounded-full glass flex items-center justify-center text-white/60 hover:text-white hover:border-white/50 active:bg-white/10 transition-colors">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0012.04 2zm0 17.83c-1.49 0-2.95-.4-4.23-1.16l-.3-.18-3.14.82.84-3.06-.2-.31a7.89 7.89 0 01-1.21-4.23c0-4.36 3.55-7.91 7.91-7.91 2.11 0 4.1.82 5.59 2.31 1.49 1.49 2.31 3.48 2.31 5.59 0 4.36-3.55 7.91-7.91 7.91z"/>
+            </svg>
+          </a>
+          <a href="https://youtube.com" target="_blank" rel="noreferrer" class="w-11 h-11 sm:w-10 sm:h-10 min-w-[44px] min-h-[44px] rounded-full glass flex items-center justify-center text-white/60 hover:text-white hover:border-white/50 active:bg-white/10 transition-colors">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"></path>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+          </a>
+        </div>
+
+        <p class="text-white/40 text-[11px] sm:text-xs tracking-widest uppercase">
+          &copy; 2026 AVEX MEDYA. TÜM HAKLARI SAKLIDIR.
+        </p>
+      </div>
+    </footer>
+
+    <!-- LIGHTBOX MODAL -->
+    <div id="lightbox" class="fixed inset-0 z-[100] bg-black/90 backdrop-blur-xl hidden flex items-center justify-center p-4">
+      <button id="lightbox-close" class="absolute top-4 right-4 sm:top-6 sm:right-6 text-white/70 hover:text-white p-3 min-w-[44px] min-h-[44px] flex items-center justify-center rounded-full bg-white/10 active:bg-white/20">
+        <svg class="w-7 h-7 sm:w-8 sm:h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+      </button>
+      <img id="lightbox-img" src="" alt="Önizleme" class="max-w-full max-h-[85vh] rounded-xl object-contain shadow-2xl border border-white/10" />
+    </div>
+
+    <!-- FLOATING WHATSAPP BUTTON (Mobile Safe Area aware) -->
+    <a href="https://wa.me/905555555555" target="_blank" rel="noreferrer" class="fixed floating-wa-btn z-40 w-13 h-13 sm:w-14 sm:h-14 min-w-[52px] min-h-[52px] rounded-full bg-emerald-500 hover:bg-emerald-400 text-white flex items-center justify-center shadow-[0_4px_25px_rgba(16,185,129,0.4)] transition-all hover:scale-110 active:scale-95" aria-label="WhatsApp ile Mesaj Gönder">
+      <svg class="w-6 h-6 sm:w-7 sm:h-7 fill-current" viewBox="0 0 24 24">
+        <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0012.04 2zm0 17.83c-1.49 0-2.95-.4-4.23-1.16l-.3-.18-3.14.82.84-3.06-.2-.31a7.89 7.89 0 01-1.21-4.23c0-4.36 3.55-7.91 7.91-7.91 2.11 0 4.1.82 5.59 2.31 1.49 1.49 2.31 3.48 2.31 5.59 0 4.36-3.55 7.91-7.91 7.91z"/>
+      </svg>
+    </a>
+
+    <!-- SCRIPTS -->
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

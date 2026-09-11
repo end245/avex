@@ -1,0 +1,8 @@
+{
+  "name": "avex23",
+  "description": "Premium Automotive Media & Production Services",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

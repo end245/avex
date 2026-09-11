@@ -1,0 +1,100 @@
+{
+  "settings": {
+    "heroTitle": "AVEX MEDYA",
+    "heroSubtitle": "Profesyonel Otomotiv Medya Hizmetleri"
+  },
+  "packages": [
+    {
+      "id": "silver",
+      "name": "SILVER PAKET",
+      "price": "2.800₺",
+      "normalPrice": "3.500₺",
+      "discount": "%20 İNDİRİM!",
+      "features": [
+        "İç Detaylı Çekim",
+        "Yol Çekimi"
+      ],
+      "isPopular": false
+    },
+    {
+      "id": "gold",
+      "name": "GOLD PAKET",
+      "price": "3.800₺",
+      "normalPrice": "5.000₺",
+      "discount": "%24 İNDİRİM!",
+      "features": [
+        "İç Detaylı Çekim",
+        "Drone Çekimi",
+        "Yol Çekimi"
+      ],
+      "isPopular": true
+    },
+    {
+      "id": "platinum",
+      "name": "PLATINUM PAKET",
+      "price": "4.800₺",
+      "normalPrice": "6.500₺",
+      "discount": "%26 İNDİRİM!",
+      "features": [
+        "İç Detaylı Çekim",
+        "Drone Çekimi",
+        "Yol Çekimi",
+        "Reels (30-60 sn)",
+        "Renk Düzenleme (Color Grading)",
+        "Thumbnail / Kapak Fotoğrafı"
+      ],
+      "isPopular": false
+    }
+  ],
+  "gallery": [
+    {
+      "id": "1",
+      "type": "photo",
+      "url": "https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?q=80&w=2070&auto=format&fit=crop",
+      "category": "Fotoğraf"
+    },
+    {
+      "id": "2",
+      "type": "photo",
+      "url": "https://images.unsplash.com/photo-1603584173870-7f23fdae1b7a?q=80&w=2069&auto=format&fit=crop",
+      "category": "Fotoğraf"
+    },
+    {
+      "id": "3",
+      "type": "photo",
+      "url": "https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?q=80&w=2070&auto=format&fit=crop",
+      "category": "Yol Çekimi"
+    },
+    {
+      "id": "4",
+      "type": "photo",
+      "url": "https://images.unsplash.com/photo-1503376712351-1c2261767098?q=80&w=2112&auto=format&fit=crop",
+      "category": "Fotoğraf"
+    }
+  ],
+  "testimonials": [
+    {
+      "id": "1",
+      "name": "Can Y.",
+      "text": "Avex Medya ile çalışmak harikaydı. Aracımın detayları inanılmaz bir şekilde videoya yansımış.",
+      "rating": 5
+    },
+    {
+      "id": "2",
+      "name": "Mehmet K.",
+      "text": "Profesyonellik arıyorsanız kesinlikle doğru adres. Drone çekimleri muazzamdı.",
+      "rating": 5
+    },
+    {
+      "id": "3",
+      "name": "Ali Rıza T.",
+      "text": "Sosyal medya için hazırladıkları reels videoları satışlarımızı çok etkiledi. Teşekkürler.",
+      "rating": 5
+    }
+  ],
+  "messages": [],
+  "stats": {
+    "views": 56,
+    "submissions": 0
+  }
+}
